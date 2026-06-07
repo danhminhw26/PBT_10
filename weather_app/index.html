@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>🌤️ Weather App</h1>
+        <p>Tìm kiếm thời tiết thành phố bạn</p>
+      </header>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Nhập tên thành phố (vd: Hà Nội, Hồ Chí Minh...)"
+          autocomplete="off"
+        />
+        <button id="searchBtn">🔍 Tìm</button>
+      </div>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <p>⏳ Đang tải dữ liệu thời tiết...</p>
+      </div>
+
+      <div id="error" class="error hidden">
+        <p id="errorMessage"></p>
+      </div>
+
+      <div id="weatherInfo" class="weather-info hidden">
+        <div class="weather-header">
+          <h2 id="cityName"></h2>
+          <p id="weatherDesc"></p>
+        </div>
+        <div class="weather-details">
+          <div class="detail">
+            <span class="label">Nhiệt độ</span>
+            <span class="value" id="temperature">-</span>
+          </div>
+          <div class="detail">
+            <span class="label">Độ ẩm</span>
+            <span class="value" id="humidity">-</span>
+          </div>
+          <div class="detail">
+            <span class="label">Tốc độ gió</span>
+            <span class="value" id="windSpeed">-</span>
+          </div>
+          <div class="detail">
+            <span class="label">Áp suất</span>
+            <span class="value" id="pressure">-</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="history-section">
+        <h3>📋 Lịch sử tìm kiếm</h3>
+        <div id="historyList" class="history-list">
+          <p class="no-history">Chưa có lịch sử tìm kiếm</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
