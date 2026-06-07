@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-API Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>📊 Multi-API Dashboard</h1>
+        <p>Tổng hợp dữ liệu từ nhiều API khác nhau</p>
+        <button id="refreshBtn" class="btn-refresh">🔄 Làm mới tất cả</button>
+      </header>
+
+      <div class="stats">
+        <span class="stat-item">
+          <strong>Thời gian tải:</strong>
+          <span id="loadTime">-</span>
+        </span>
+      </div>
+
+      <div class="dashboard" id="dashboard"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
